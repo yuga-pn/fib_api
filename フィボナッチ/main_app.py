@@ -18,3 +18,6 @@ def fibonacchi():
 @app.route("/")
 def welcome():
     return "<p>Welcome to my server! This server calculates fibonacchi sequence. Please enter number you want to know.</p>"
+
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0')
