@@ -2,6 +2,7 @@ from flask import Flask,request, jsonify
 from application import fib_app
 import math
 from dotenv import load_dotenv
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -21,4 +22,4 @@ def welcome():
     return "<p>Welcome to my server! This server calculates fibonacchi sequence. Please enter number you want to know.</p>"
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    serve(app,host="0.0.0.0",port=5000)
