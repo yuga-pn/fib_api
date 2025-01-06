@@ -19,7 +19,7 @@ def fibonacchi():
 
 @app.route("/")
 def welcome():
-    return "<p>Welcome to my server! This server calculates fibonacchi sequence. Please enter number you want to know.</p>"
+    return jsonify({"status": 400, "message": "Please enter number!"}), 400
 
 if __name__ == '__main__':
     serve(app,host="0.0.0.0",port=5000)
