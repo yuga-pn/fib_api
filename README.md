@@ -1,3 +1,8 @@
+＜使用技術＞
+言語：Python
+フレームワーク：Flask
+サーバ：WSGIサーバ：waitress
+デプロイ先：render
 ＜コード構成＞
 fib_api - main_app.py
         - requirements.txt
