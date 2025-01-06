@@ -22,4 +22,15 @@ def use_exsample(test_case):
         print("Response code:" , inputs)
         print("Response body:", result.stdout)
 
-use_exsample(test_cases)
+def input_test(curl):
+    result = subprocess.run(curl, capture_output=True, text=True)
+    print("Response code:" , curl[3])
+    print("Response body:", result.stdout)
+    return result.stdout
+    
+choice = str(input("Do you want to enter curl? (y/n)"))
+if(choice == "y"):
+    curl = list(map(str,input("Enter curl command:").split()))
+    input_test(curl)
+else:
+    use_exsample(test_cases)
