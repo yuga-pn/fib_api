@@ -7,9 +7,9 @@ import pycurl
 curl_command = [
     "curl",
     "-X", "GET",
-    "http://127.0.0.1:5000/"
+    "https://fib-api-bwwo.onrender.com/"
 ]
-default_page = "http://127.0.0.1:5000/"
+default_page = "https://fib-api-bwwo.onrender.com/"
 fib = "fib?n="
 test_cases = ["","10","2","1","0","w","10w","1000","99999"]
 
